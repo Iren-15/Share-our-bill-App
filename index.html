@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет суммы счета на человека💰</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+        <form>
+            <h1>Поделим наш счет!!!</h1>
+            <h4>Общая сумма счета, грн.:</h4>
+            <input class="bill-input" type="number" placeholder="Введите сумму счета...">
+            <h4>Количество человек:</h4>
+            <input class="people-input" type="number" placeholder="Введите количество человек...">
+            <h4>Понравилось обслуживание?</h4>
+            <button class="btn-tip">Выберите вознаграждение официанту!</button>
+            <select id="change-tip">
+                <option disabled>Выберите размер вознаграждения </option>
+                <option value="0.1">Отличное обслуживание 10%</option>
+                <option value="0.07">Хорошее обслуживание 7%</option>
+                <option value="0.05">Среднее обслуживание 5%</option>
+                <option value="0.0" selected>Без дополнительного вознаграждения‍</option>
+            </select>
+            <button class="btn-calculate">Рассчитать</button>
+        </form>
+    
+        <div class="show-box">
+            <div class="total-bill">
+                <p>Счет</p>
+                <br>
+                <span class="wite">
+                    <span class="bill-per-person"></span>
+                    грн.
+                </span>
+                <br>
+                <span>на человека</span>
+            </div>
+            <div class="total-tip">
+                <p>Дополнительное вознаграждение</p>
+                <span class="wite">
+                    <span class="tip-per-person"></span>
+                    грн.
+                </span>
+                <br>
+                <span>на человека</span>
+            </div>
+            <div class="total-amount">
+                <p>Общая сумма</p>
+                <br>
+                <span class="wite">
+                    <span class="amount-per-person"></span>
+                    грн.
+                </span>
+                <br>
+                <span>на человека</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+</body>
+</html>
